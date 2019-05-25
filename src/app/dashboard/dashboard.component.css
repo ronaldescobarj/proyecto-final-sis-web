@@ -11,10 +11,10 @@
     background: black url('../../assets/images/merch-mq.jpg');
 }
 
-.font {
-    font-family: fantasy;
+.concerts-cover {
+    background: black url('../../assets/images/concierto.jpg');
 }
 
-.font-white {
+.font {
     font-family: fantasy;
 }
