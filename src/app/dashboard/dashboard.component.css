@@ -1,0 +1,20 @@
+.new-album {
+    /* background: white url('../../assets/images/trench-cover.jpg')center / cover; */
+    background: black url('../../assets/images/fondo-amarillo-rectangular.jpg');
+}
+
+.album-cover {
+    background: black url('../../assets/images/trench-cover-mq.jpg');
+}
+
+.store-cover {
+    background: black url('../../assets/images/merch-mq.jpg');
+}
+
+.font {
+    font-family: fantasy;
+}
+
+.font-white {
+    font-family: fantasy;
+}
