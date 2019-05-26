@@ -25,4 +25,8 @@ export class LoginComponent implements OnInit {
     this.loginService.loginWithFacebook();
   }
 
+  isInvalid() {
+    return false;
+  }
+
 }
