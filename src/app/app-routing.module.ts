@@ -8,14 +8,18 @@ import { CreateConcertComponent } from '../app/create-concert/create-concert.com
 import { ViewConcertComponent } from '../app/view-concert/view-concert.component';
 import { CreateUserComponent } from '../app/create-user/create-user.component';
 import { ViewUserComponent } from '../app/view-user/view-user.component';
+import { ConcertsListComponent } from './concerts-list/concerts-list.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'new/concert', component:  CreateConcertComponent},
-  { path: 'new/user', component:  CreateUserComponent},
+  { path: 'concerts', component:  ConcertsListComponent},
   { path: 'concert', component:  ViewConcertComponent},
+  { path: 'new/user', component:  CreateUserComponent},
+  { path: 'users', component:  UsersListComponent},
   { path: 'user', component:  ViewUserComponent},
 ];
 

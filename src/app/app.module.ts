@@ -12,6 +12,8 @@ import { CreateConcertComponent } from './create-concert/create-concert.componen
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ViewConcertComponent } from './view-concert/view-concert.component';
 import { ViewUserComponent } from './view-user/view-user.component';
+import { ConcertsListComponent } from './concerts-list/concerts-list.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ViewUserComponent } from './view-user/view-user.component';
     CreateConcertComponent,
     CreateUserComponent,
     ViewConcertComponent,
-    ViewUserComponent
+    ViewUserComponent,
+    ConcertsListComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,
