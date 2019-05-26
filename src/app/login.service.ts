@@ -30,18 +30,19 @@ export class LoginService {
   }
 
   login(credentials: any) {
-    return this.httpService.post("login", credentials).subscribe(response => {
+    return this.httpService.post("user/login", credentials).subscribe(response => {
       this.success(credentials);
     })
   }
 
   private success(credentials: any) {
-    localStorage.setItem("credentials", credentials);
-    this.router.navigateByUrl("/home");
+    localStorage.setItem("credentials", JSON.stringify(credentials));
+    this.router.navigateByUrl("/dashboard");
   }
 
   logout() {
     localStorage.removeItem("credentials");
+    this.router.navigateByUrl("/login");
   }
 
   loginWithFacebook() {
