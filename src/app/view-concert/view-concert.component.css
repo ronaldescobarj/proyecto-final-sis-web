@@ -1,0 +1,59 @@
+.background-image {
+    background: black url('../../assets/images/concert-background-concertview.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+}
+.container-reduced {
+    width: 50%
+}
+
+.input:hover, .textarea:hover, .input:focus, .textarea:focus {
+    border-color: #fce200;
+}
+input[type="date"], input[type="time"] {
+    width: 250px;
+}
+input[type=date]::-webkit-inner-spin-button {
+    color: #fce200;
+}
+.fantasy-letters, input, button, a, textarea {
+    font-family: fantasy;
+    color: #fce200;
+}
+::-webkit-input-placeholder{
+    color: #F7F3B2;
+}
+.yellow-letters {
+    color: #fce200;
+}
+input, .dollar-icon-border, textarea {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    background-color: black;
+    opacity: 0.7;
+}
+.container-img {
+    position: relative;
+    text-align: center;
+}
+.frame-img {
+    opacity: 0.6;
+}
+.centered-text-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 175%;
+}
+.concert-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 300px;
+}
