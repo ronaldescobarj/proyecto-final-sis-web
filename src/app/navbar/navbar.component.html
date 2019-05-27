@@ -13,7 +13,7 @@
         ALBUMES
       </a>
 
-      <a class="navbar-item" style=" font-family: fantasy; color: #fce200">
+      <a class="navbar-item" routerLink="/merch" style=" font-family: fantasy; color: #fce200">
         TIENDA
       </a>
 
@@ -25,9 +25,9 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a *ngIf="!isLoggedIn()" id="sign-up-but" class="button is-light">
+          <button (click)="register()" *ngIf="!isLoggedIn()" id="sign-up-but" class="button is-light">
             REGISTRARSE
-          </a>
+          </button>
 
           <a *ngIf="!isLoggedIn()" routerLink="/login" id="log-in-but" class="button is-light">
             INICIAR SESION
