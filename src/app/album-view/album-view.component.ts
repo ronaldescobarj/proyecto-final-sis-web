@@ -12,8 +12,10 @@ export class AlbumViewComponent implements OnInit {
   albumSongs:any;
   albumImage:string = "";
   albumId:string = "";
+  loading:boolean;
 
   constructor(private spotyService:SpotyService, private activatedRoute:ActivatedRoute) {
+    this.loading = true;
     this.activatedRoute.params.subscribe( params => {
       this.albumId = params.albumId;
       this.albumImage= params.albumImage;
@@ -22,6 +24,7 @@ export class AlbumViewComponent implements OnInit {
     this.spotyService.getAlbumSong(this.albumId)
       .subscribe(songs=>{ 
         this.albumSongs = songs;
+        this.loading = false;
       });  
   }
 

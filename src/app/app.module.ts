@@ -20,6 +20,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { ConcertsListComponent } from './concerts-list/concerts-list.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     ViewConcertComponent,
     ViewUserComponent,
     ConcertsListComponent,
-    UsersListComponent
+    UsersListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
