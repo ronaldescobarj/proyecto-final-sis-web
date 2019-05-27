@@ -20,6 +20,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { ConcertsListComponent } from './concerts-list/concerts-list.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 import { MerchListComponent } from './merch-list/merch-list.component';
 import { AddMerchComponent } from './add-merch/add-merch.component';
 import { EditMerchComponent } from './edit-merch/edit-merch.component';
@@ -41,6 +42,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     ViewUserComponent,
     ConcertsListComponent,
     UsersListComponent,
+    FooterComponent,
     MerchListComponent,
     AddMerchComponent,
     EditMerchComponent,
