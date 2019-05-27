@@ -20,7 +20,6 @@ export class UpdateUserComponent implements OnInit {
     profilePicture: null
   };
   userId: any;
-<<<<<<< HEAD
   constructor(private _location: Location, private httpService: HttpService,
     private route: ActivatedRoute, private router: Router) { }
 
@@ -28,11 +27,8 @@ export class UpdateUserComponent implements OnInit {
     this.userId = this.route.snapshot.paramMap.get('id');
     this.httpService.get('user/' + this.userId).subscribe((response: any) => {
       this.userData = response;
-    })
+    });
   }
-=======
-  constructor(private _location: Location, private httpService: HttpService, private route: ActivatedRoute) { }
->>>>>>> 056eb8f09b94a7abd8cd8a18d48bd22eef66082c
 
   goBackLastPage() {
     this._location.back();
