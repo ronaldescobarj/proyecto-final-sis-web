@@ -10,15 +10,15 @@ export class CreateUserComponent implements OnInit {
 
   userData = {
     name: null,
-    identityCard: null, 
-    eMail: null,
+    identityCard: null,
+    email: null,
     password: null,
     homeAddress: null,
     profilePicture: null
   }
 
-  constructor(private _location: Location)  { }
-  
+  constructor(private _location: Location) { }
+
   goBackLastPage() {
     this._location.back();
   }

@@ -12,15 +12,15 @@ export class ViewUserComponent implements OnInit {
 
   userData = {
     name: null,
-    identityCard: null, 
-    eMail: null,
+    identityCard: null,
+    email: null,
     password: null,
     homeAddress: null,
     profilePicture: null
   }
   userId: any;
-  constructor(private _location: Location, private router: Router, private httpService: HttpService, private route: ActivatedRoute)  { }
-  
+  constructor(private _location: Location, private router: Router, private httpService: HttpService, private route: ActivatedRoute) { }
+
   goBackLastPage() {
     this._location.back();
   }

@@ -14,13 +14,13 @@ export class UpdateUserComponent implements OnInit {
   userData = {
     name: null,
     identityCard: null,
-    eMail: null,
+    email: null,
     password: null,
     homeAddress: null,
     profilePicture: null
   }
   userId: any;
-  constructor(private _location: Location, private httpService:HttpService, private route:ActivatedRoute) { }
+  constructor(private _location: Location, private httpService: HttpService, private route: ActivatedRoute) { }
 
   goBackLastPage() {
     this._location.back();

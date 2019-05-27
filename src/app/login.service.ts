@@ -29,9 +29,11 @@ export class LoginService {
     }(document, 'script', 'facebook-jssdk'));
   }
 
-  login(credentials: any) {
+  login(credentials: any, callback: any) {
     return this.httpService.post("user/login", credentials).subscribe(response => {
-      this.success(credentials);
+      let valid = callback(response);
+      if (valid)
+        this.success(credentials);
     })
   }
 
