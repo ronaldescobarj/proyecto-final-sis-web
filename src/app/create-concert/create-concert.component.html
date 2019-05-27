@@ -1,0 +1,169 @@
+<br />
+<br />
+<div class="background-image">
+  <br />
+  <section class="container fantasy-letters">
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <div class="container-img">
+            <img class="frame-img" id="explotion-frame" src="../../assets/images/explotion-frame.png" alt=""/>
+            <div class="centered-text-img ">Crear concierto</div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Titulo:</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Titulo" [(ngModel)]="concertData.title">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-align-justify"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Ubicacion:</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Ubicacion" [(ngModel)]="concertData.location">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Ciudad:</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="text" placeholder="Ciudad" [(ngModel)]="concertData.city">
+                  <span class="icon is-small is-left">
+                      <i class="fas fa-globe"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        <br />
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Precio:</label>
+            </div>
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field has-addons">
+                <p class="control">
+                  <a class="button is-static dollar-icon-border">
+                    $
+                  </a>
+                </p>
+                <p class="control is-expanded">
+                  <input class="input" type="tel" placeholder="precio en dolares del concierto" [(ngModel)]="concertData.price">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Fecha:</label>
+          </div>
+          <div class="field-body">
+            <div class="field is-narrow">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <input class="input" type="date" [(ngModel)]="concertData.date">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Hora de inicio:</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="time" [(ngModel)]="concertData.entrySchedule">
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Hora de terminacion:</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="time" [(ngModel)]="concertData.terminationSchedule">
+                </p>
+              </div>
+            </div>
+          </div>
+        <br />
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Imagen</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                    <input id="file-upload" class="upload-box" placeholder="Upload File" type="file" [(ngModel)]="concertData.concertPicture"/>
+                </p>
+              </div>
+            </div>
+          </div>
+        <br />
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Detalles:</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <textarea class="textarea" placeholder="Detalles del concierto como ser tematica, canciones que se van a tocar, efectos especiales, etc" [(ngModel)]="concertData.details"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="field is-horizontal">
+          <div class="field-label">
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <button class="button is-black yellow-letters" (click)="createConcert()">
+                  Crear concierto
+                </button>
+                <button class="button is-black yellow-letters" (click)="goBackLastPage()">
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+  </section>
+</div>

@@ -13,6 +13,13 @@ import { AlbumViewComponent } from './album-view/album-view.component';
 import { SpotyService} from './spoty.service';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
+import { CreateConcertComponent } from './create-concert/create-concert.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { ViewConcertComponent } from './view-concert/view-concert.component';
+import { ViewUserComponent } from './view-user/view-user.component';
+import { ConcertsListComponent } from './concerts-list/concerts-list.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +29,19 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     NavbarComponent,
     AlbumsComponent,
     AlbumViewComponent,
-    DomseguroPipe
+    DomseguroPipe,
+    CreateConcertComponent,
+    CreateUserComponent,
+    ViewConcertComponent,
+    ViewUserComponent,
+    ConcertsListComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
     
   ],
   providers: [
