@@ -40,7 +40,7 @@ import { EditMerchComponent } from './edit-merch/edit-merch.component';
     ViewUserComponent,
     ConcertsListComponent,
     UsersListComponent,
-    FooterComponent
+    FooterComponent,
     MerchListComponent,
     AddMerchComponent,
     EditMerchComponent
