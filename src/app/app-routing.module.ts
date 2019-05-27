@@ -23,10 +23,10 @@ const routes: Routes = [
   { path: 'albums',component: AlbumsComponent},
   { path: 'new/concert', component:  CreateConcertComponent},
   { path: 'concerts', component:  ConcertsListComponent},
-  { path: 'concert', component:  ViewConcertComponent},
+  { path: 'concert/:id', component:  ViewConcertComponent},
   { path: 'new/user', component:  CreateUserComponent},
   { path: 'users', component:  UsersListComponent},
-  { path: 'user', component:  ViewUserComponent},
+  { path: 'user/:id', component:  ViewUserComponent},
   { path: 'merch', component: MerchListComponent },
   { path: 'merch/add', component: AddMerchComponent },
 

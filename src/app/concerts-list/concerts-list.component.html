@@ -11,23 +11,23 @@
         </div>
       </div>
     </div>
-    <section class="hero is-bold jumbotron">
+    <section *ngFor="let concert of concertsList" class="hero is-bold jumbotron">
       <div class="hero-body">
         <div class="container">
           <div class="columns">
             <div class="column is-one-fifth">
               <section class="image">
-                <img src="http://verybilbao.com/wp-content/uploads/2019/03/twenty-one-pilots-bilbao-portada.jpg" alt="">
+                <img src={{concert.concertPicture}} alt="">
               </section>
             </div>
             <div class="column">
               <h1 class="title">
-                Concierto aniversario de Cochabamba 2019
+                {{concert.title}}
               </h1>
               <h2 class="subtitle">
-                <p>Ciudad: <span>Cochabamba, Bolivia</span></p>
-                <p>Fecha: <span>21 de Septiembre del 2019</span></p>
-                <button class="button is-black yellow-letters">Ver mas</button>
+                <p>Ciudad: <span>{{concert.city}}</span></p>
+                <p>Fecha: <span>{{concert.date}}</span></p>
+                <button class="button is-black yellow-letters" (click)="viewConcert(concert._id)">Ver mas</button>
               </h2>
             </div>
           </div>
@@ -35,29 +35,6 @@
       </div>
     </section>
     <br />
-    <section class="hero is-bold jumbotron">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-one-fifth">
-              <section class="image">
-                <img src="https://i1.wp.com/www.sopitas.com/wp-content/uploads/2018/10/Pilots.jpg" alt="">
-              </section>
-            </div>
-            <div class="column">
-              <h1 class="title">
-                Concierto Salar de Uyuni 2020
-              </h1>
-              <h2 class="subtitle">
-                <p>Ciudad: <span>Uyuni, Bolivia</span></p>
-                <p>Fecha: <span>06 de Julio del 2020</span></p>
-                <button class="button is-black yellow-letters">Ver mas</button>
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <br />
   </section>
 </div>
