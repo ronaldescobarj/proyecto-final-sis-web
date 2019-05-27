@@ -20,17 +20,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th>1</th>
-                <td><a href="#">Jose Daniel Oropeza Soria</a>
+              <tr *ngFor="let user of usersList">
+                <th>{{user._id}}</th>
+                <td><a (click)="viewUser(user._id)">{{user.name}}</a>
                 </td>
-                <td>dany.orop@gmail.com</td>
+                <td>{{user.eMail}}</td>
               </tr>
-              <tr>
-                <th>2</th>
-                <td><a href="#">Ronald Escobar Jaldin</a>
-                <td>ronaldescobarj@gmail.com</td>
-             </tr>
             </tbody>
           </table>
       </div>

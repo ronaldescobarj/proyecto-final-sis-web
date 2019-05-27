@@ -1,0 +1,26 @@
+.box {
+    background: black url('../../assets/images/fondo-amarillo-rectangular.jpg');
+
+}
+
+.font {
+    font-family: fantasy;
+}
+
+.font-yellow {
+    font-family: fantasy;
+    color: #fce200;
+}
+
+.fondo{
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:1;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background: black;
+}

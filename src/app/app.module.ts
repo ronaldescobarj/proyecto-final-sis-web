@@ -20,7 +20,13 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { ConcertsListComponent } from './concerts-list/concerts-list.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { FooterComponent } from './footer/footer.component';
+=======
+import { MerchListComponent } from './merch-list/merch-list.component';
+import { AddMerchComponent } from './add-merch/add-merch.component';
+import { EditMerchComponent } from './edit-merch/edit-merch.component';
+>>>>>>> 2668df65e0443fc87a85a723c39f37ea035582df
 
 @NgModule({
   declarations: [
@@ -37,7 +43,13 @@ import { FooterComponent } from './footer/footer.component';
     ViewUserComponent,
     ConcertsListComponent,
     UsersListComponent,
+<<<<<<< HEAD
     FooterComponent
+=======
+    MerchListComponent,
+    AddMerchComponent,
+    EditMerchComponent
+>>>>>>> 2668df65e0443fc87a85a723c39f37ea035582df
   ],
   imports: [
     BrowserModule,
