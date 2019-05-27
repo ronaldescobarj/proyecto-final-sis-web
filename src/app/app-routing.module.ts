@@ -16,6 +16,8 @@ import { MerchListComponent } from './merch-list/merch-list.component';
 import { AddMerchComponent } from './add-merch/add-merch.component';
 import { UpdateConcertComponent } from './update-concert/update-concert.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { EditMerchComponent } from './edit-merch/edit-merch.component';
+import { ViewMerchComponent } from './view-merch/view-merch.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -32,7 +34,9 @@ const routes: Routes = [
   { path: 'users', component:  UsersListComponent},
   { path: 'user/:id', component:  ViewUserComponent},
   { path: 'merch', component: MerchListComponent },
-  { path: 'merch/add', component: AddMerchComponent },
+  { path: 'merch/new', component: AddMerchComponent },
+  { path: 'merch/update/:id', component: EditMerchComponent },
+  { path: 'merch/:id', component: ViewMerchComponent }
 ];
 
 @NgModule({

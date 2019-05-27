@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-merch',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddMerchComponent implements OnInit {
 
-  constructor() { }
+  merch: any = {
+    name: null,
+    price: null,
+    availableUnits: null,
+    imageUrl: null,
+    description: null
+  }
+
+  constructor(private httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  addMerch() {
+    console.log(this.merch);
+    this.httpService.post("merchandise", this.merch).subscribe(response => {
+      this.goBack();
+    })
+  }
+
+  goBack() {
+    this.router.navigateByUrl("/merch");
+  }
 }
