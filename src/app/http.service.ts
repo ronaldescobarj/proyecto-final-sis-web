@@ -16,6 +16,7 @@ export class HttpService {
   }
 
   post(url: string, data: any) {
+    console.log(this.baseUrl + url);
     return this.http.post(this.baseUrl + url, data);
   }
 
