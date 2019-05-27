@@ -37,4 +37,8 @@ export class ViewUserComponent implements OnInit {
       this.router.navigateByUrl('/dashboard');
     });
   }
+
+  update() {
+    this.router.navigateByUrl('/user/update/' + this.userId);    
+  }
 }

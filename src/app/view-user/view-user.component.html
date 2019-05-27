@@ -93,22 +93,19 @@
         <br />
       </div>
     </div>
-    <section class="image">
-      <img class="is-rounded profile-img" [src]="userData.profilePicture" alt="">
-    </section>
     <div class="field is-horizontal">
       <div class="field-label">
       </div>
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <button class="button is-black yellow-letters" (click)="goBackLastPage()">
+            <button  class="button is-black yellow-letters" (click)="goBackLastPage()">
               Volver
             </button>
-            <button class="button is-black yellow-letters">
+            <button (click)="update()" class="button is-black yellow-letters">
               Modificar usuario
             </button>
-            <button class="button is-black yellow-letters" (click)="deleteUser()">
+            <button (click)="deleteUser()" class="button is-black yellow-letters" (click)="deleteUser()">
               Eliminar usuario
             </button>
           </div>

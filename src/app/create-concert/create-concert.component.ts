@@ -31,7 +31,7 @@ export class CreateConcertComponent implements OnInit {
 
   createConcert() {
     console.log(this.concertData);
-    this.http.post('concert/',this.concertData).subscribe(res => {
+    this.http.post('concert',this.concertData).subscribe(res => {
         this.router.navigateByUrl('/concerts');
     },error=>{ 
       console.log(error);

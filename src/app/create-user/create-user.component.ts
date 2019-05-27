@@ -29,8 +29,9 @@ export class CreateUserComponent implements OnInit {
 
   createUser() {
     this.httpService.post('user', this.userData).subscribe(response => {
+      console.log("==================================");
       console.log(response);
       this.router.navigateByUrl('/dashboard');
-    });
+    }, error => console.log(error));
   }
 }
