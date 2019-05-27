@@ -2,34 +2,34 @@
 <br />
 <div class="background-image">
   <br />
-  <section class="container fantasy-letters">
-    <div class="columns">
-      <div class="column is-one-third">
-        <div class="container-img">
-          <img class="frame-img" id="explotion-frame" src="../../assets/images/explotion-frame.png" alt=""/>
-          <div class="centered-text-img ">Lista de usuarios</div>
-        </div>
-      </div>
-      <div class="column">
-        <table class="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>E-mail</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let user of usersList">
-                <th>{{user._id}}</th>
-                <td><a (click)="viewUser(user._id)">{{user.name}}</a>
-                </td>
-                <td>{{user.eMail}}</td>
-              </tr>
-            </tbody>
-          </table>
+  <section class="hero is-fullheight container fantasy-letters">
+    <!-- <div class="columns"> -->
+    <div class="hero-header">
+      <div class="container-img">
+        <img class="frame-img" id="explotion-frame" src="../../assets/images/explotion-frame.png" alt="" />
+        <div class="centered-text-img ">Lista de usuarios</div>
       </div>
     </div>
-    
+    <div class="hero-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of usersList">
+            <th>{{user._id}}</th>
+            <td><a (click)="viewUser(user._id)">{{user.name}}</a>
+            </td>
+            <td>{{user.eMail}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- </div> -->
+
   </section>
 </div>
