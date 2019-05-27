@@ -33,7 +33,7 @@ export class MerchListComponent implements OnInit {
   }
 
   delete(id: any) {
-    this.httpService.delete("merch", id).subscribe(response => {
+    this.httpService.delete("merchandise", id).subscribe(response => {
       window.location.reload();
     })
   }
