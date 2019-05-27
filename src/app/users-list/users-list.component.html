@@ -14,17 +14,24 @@
         <table class="table">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>CI</th>
               <th>Nombre</th>
               <th>E-mail</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let user of usersList">
-              <th>{{user._id}}</th>
+              <td>{{user.identityCard}}</td>
               <td><a (click)="viewUser(user._id)">{{user.name}}</a>
               </td>
               <td>{{user.eMail}}</td>
+              <td><button class="button is-info" (click)="viewUser(user._id)">
+                  Ver </button></td>
+              <td><button class="button is-warning" (click)="updateUser(user._id)">
+                  Editar </button></td>
+              <td><button class="button is-danger" (click)="deleteUser(user._id)">
+                  Eliminar </button></td>
             </tr>
           </tbody>
         </table>
