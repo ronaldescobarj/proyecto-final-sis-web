@@ -14,6 +14,7 @@ import { ViewConcertComponent } from './view-concert/view-concert.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { ConcertsListComponent } from './concerts-list/concerts-list.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UsersListComponent } from './users-list/users-list.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     
   ],
   providers: [AuthUserGuard],

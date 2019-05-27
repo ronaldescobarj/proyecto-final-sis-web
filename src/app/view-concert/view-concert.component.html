@@ -18,7 +18,7 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control is-expanded has-icons-left">
-                    <input class="input" type="text" value="Aniversario de Cochabamba Twentyone pilots" readonly>
+                    <input class="input" type="text" [value]="concertData.title" readonly>
                     <span class="icon is-small is-left">
                       <i class="fas fa-align-justify"></i>
                     </span>
@@ -33,7 +33,7 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control is-expanded has-icons-left">
-                    <input class="input" type="text" value="Estadium Felix Capriles" readonly>
+                    <input class="input" type="text" [value]="concertData.location" readonly>
                     <span class="icon is-small is-left">
                       <i class="fas fa-map-marker-alt"></i>
                     </span>
@@ -48,7 +48,7 @@
                 <div class="field-body">
                   <div class="field">
                     <p class="control is-expanded has-icons-left">
-                      <input class="input" type="text" value="Cochabamba, Bolivia" readonly>
+                      <input class="input" type="text" [value]="concertData.city" readonly>
                       <span class="icon is-small is-left">
                           <i class="fas fa-globe"></i>
                       </span>
@@ -69,7 +69,7 @@
                       </a>
                     </p>
                     <p class="control is-expanded">
-                      <input class="input" type="text" value="9500" readonly>
+                      <input class="input" type="text" [value]="concertData.price" readonly>
                     </p>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
                 <div class="field is-narrow">
                   <div class="control">
                     <div class="select is-fullwidth">
-                      <input class="input" type="text" value="21 de Septiembre" readonly/>
+                      <input class="input" type="text" [value]="concertData.date" readonly/>
                     </div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@
                 <div class="field-body">
                   <div class="field">
                     <p class="control is-expanded has-icons-left">
-                      <input class="input" type="text" value="21:00 - 23:59" readonly />
+                      <input class="input" type="text" [value]="concertData.entrySchedule" readonly />
                     </p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@
         <div class="columns">
           <div class="column is-half">
             <section class="image">
-              <img class="is-rounded concert-img" src="https://cde.publimetro.e3.pe/ima/0/0/1/5/3/153889.jpg" alt="">
+              <img class="is-rounded concert-img" [src]="concertData.concertPicture" alt="">
             </section>
           </div>
           <div class="column">
@@ -119,13 +119,13 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <button class="button is-black yellow-letters">
+                <button class="button is-black yellow-letters" (click)="goBackLastPage()">
                   Volver
                 </button>
                 <button class="button is-black yellow-letters">
                   Modificar concierto
                 </button>
-                <button class="button is-black yellow-letters">
+                <button class="button is-black yellow-letters" (click)="deleteConcert()">
                   Eliminar concierto
                 </button>
               </div>

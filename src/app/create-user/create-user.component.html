@@ -18,7 +18,7 @@
           <div class="field-body">
             <div class="field">
               <p class="control is-expanded has-icons-left">
-                <input class="input" type="text" placeholder="Jose Daniel Oropeza Soria">
+                <input class="input" type="text" placeholder="Jose Daniel Oropeza Soria" [(ngModel)]="userData.name">
                 <span class="icon is-small is-left">
                   <i class="fas fa-align-justify"></i>
                 </span>
@@ -34,7 +34,7 @@
           <div class="field-body">
             <div class="field">
               <p class="control is-expanded has-icons-left">
-                <input class="input" type="text" placeholder="7711450">
+                <input class="input" type="text" placeholder="7711450" [(ngModel)]="userData.identityCard">
                 <span class="icon is-small is-left">
                     <i class="fas fa-id-card"></i>
                 </span>
@@ -50,7 +50,7 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input class="input" type="text" placeholder="dany.orop@gmail.com">
+                  <input class="input" type="text" placeholder="dany.orop@gmail.com" [(ngModel)]="userData.eMail">
                   <span class="icon is-small is-left">
                       <i class="fas fa-at"></i>
                   </span>
@@ -66,7 +66,7 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input class="input" type="password" placeholder="hazlo seguro">
+                  <input class="input" type="password" placeholder="hazlo seguro" [(ngModel)]="userData.password">
                   <span class="icon is-small is-left">
                       <i class="fas fa-lock"></i>
                   </span>
@@ -82,7 +82,7 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input class="input" type="text" placeholder="Calle Tahuantinsuyo #830">
+                  <input class="input" type="text" placeholder="Calle Tahuantinsuyo #830" [(ngModel)]="userData.homeAddress">
                   <span class="icon is-small is-left">
                       <i class="fas fa-home"></i>
                   </span>
@@ -98,7 +98,7 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                    <input id="file-upload" class="upload-box" placeholder="Upload File" type="file"/>
+                    <input id="file-upload" class="upload-box" placeholder="Upload File" type="file" [(ngModel)]="userData.profilePicture" />
                 </p>
               </div>
             </div>
@@ -110,10 +110,10 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <button class="button is-black yellow-letters">
+                <button class="button is-black yellow-letters" (click)="createUser()">
                   Crear usuario
                 </button>
-                <button class="button is-black yellow-letters">
+                <button class="button is-black yellow-letters" (click)="goBackLastPage()">
                   Cancelar
                 </button>
               </div>

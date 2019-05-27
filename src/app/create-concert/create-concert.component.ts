@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from "@angular/common"; 
 
 @Component({
   selector: 'app-create-concert',
@@ -7,8 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateConcertComponent implements OnInit {
 
-  constructor() { }
+  concertData = {
+    title: null,
+    location: null, 
+    city: null,
+    price: null,
+    date: null,
+    entrySchedule: null,
+    terminationSchedule: null,
+    details: null,
+    concertPicture: null
+  }
 
+
+  constructor(private _location: Location)  { }
+  
+  goBackLastPage() {
+    this._location.back();
+  }
+  createConcert() {
+    console.log(this.concertData);
+  }
   ngOnInit() {
   }
 
