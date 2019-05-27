@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from "@angular/common";
+import { Location } from '@angular/common';
 import { HttpSentEvent } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
 @Component({
@@ -18,23 +18,28 @@ export class UpdateUserComponent implements OnInit {
     password: null,
     homeAddress: null,
     profilePicture: null
-  }
+  };
   userId: any;
-  constructor(private _location: Location, private httpService: HttpService, private route: ActivatedRoute) { }
+  constructor(private _location: Location, private httpService: HttpService,
+    private route: ActivatedRoute, private router: Router) { }
+
+  ngOnInit() {
+    this.userId = this.route.snapshot.paramMap.get('id');
+    this.httpService.get('user/' + this.userId).subscribe((response: any) => {
+      this.userData = response;
+    });
+  }
 
   goBackLastPage() {
     this._location.back();
   }
+
   updateUser() {
-    console.log(this.userData);
-  }
-  ngOnInit() {
-    this.userId = this.route.snapshot.paramMap.get("id");
-    console.log(this.userId);
-    this.httpService.get("user/" + this.userId).subscribe((response: any) => {
+    this.httpService.put('user', this.userData).subscribe(response => {
       console.log(response);
-      this.userData = response;
-    })
+      this.router.navigateByUrl('users');
+    });
   }
+
 }
 

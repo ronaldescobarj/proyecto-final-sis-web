@@ -16,25 +16,29 @@ export class ViewUserComponent implements OnInit {
     email: null,
     password: null,
     homeAddress: null,
-    profilePicture: null
-  }
+  };
   userId: any;
-  constructor(private _location: Location, private router: Router, private httpService: HttpService, private route: ActivatedRoute) { }
+  constructor(private _location: Location, private router: Router,
+    private httpService: HttpService, private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.userId = this.route.snapshot.paramMap.get('id');
+    this.httpService.get('user/' + this.userId).subscribe((response: any) => {
+      this.userData = response;
+    });
+  }
 
   goBackLastPage() {
     this._location.back();
   }
+
   deleteUser() {
-    this.httpService.delete("user", this.userId).subscribe((response) => {
-      console.log(response);
-    })
+    this.httpService.delete('user', this.userId).subscribe((response) => {
+      this.router.navigateByUrl('/dashboard');
+    });
   }
-  ngOnInit() {
-    this.userId = this.route.snapshot.paramMap.get("id");
-    console.log(this.userId);
-    this.httpService.get("user/" + this.userId).subscribe((response: any) => {
-      console.log(response);
-      this.userData = response;
-    })
+
+  update() {
+    this.router.navigateByUrl('/user/update/' + this.userId);    
   }
 }

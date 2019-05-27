@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from "@angular/common";
+import { Location } from '@angular/common';
+import { HttpService } from '../http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-user',
@@ -14,18 +16,22 @@ export class CreateUserComponent implements OnInit {
     email: null,
     password: null,
     homeAddress: null,
-    profilePicture: null
   }
 
-  constructor(private _location: Location) { }
+  constructor(private _location: Location, private httpService: HttpService, private router: Router) { }
+
+  ngOnInit() {
+  }
 
   goBackLastPage() {
     this._location.back();
   }
-  createUser() {
-    console.log(this.userData);
-  }
-  ngOnInit() {
-  }
 
+  createUser() {
+    this.httpService.post('user', this.userData).subscribe(response => {
+      console.log("==================================");
+      console.log(response);
+      this.router.navigateByUrl('/dashboard');
+    }, error => console.log(error));
+  }
 }
