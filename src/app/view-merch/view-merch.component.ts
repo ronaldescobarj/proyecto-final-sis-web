@@ -3,11 +3,11 @@ import { HttpService } from '../http.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-edit-merch',
-  templateUrl: './edit-merch.component.html',
-  styleUrls: ['./edit-merch.component.css']
+  selector: 'app-view-merch',
+  templateUrl: './view-merch.component.html',
+  styleUrls: ['./view-merch.component.css']
 })
-export class EditMerchComponent implements OnInit {
+export class ViewMerchComponent implements OnInit {
 
   merchId: any;
   merch: any = {
@@ -27,13 +27,8 @@ export class EditMerchComponent implements OnInit {
     })
   }
 
-  saveChanges() {
-    this.httpService.put("merchandise", this.merch).subscribe(response => {
-      this.goBack();
-    })
-  }
-
   goBack() {
     this.router.navigateByUrl("/merch");
   }
+
 }

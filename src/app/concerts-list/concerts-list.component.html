@@ -11,6 +11,13 @@
         </div>
       </div>
     </div>
+
+    <div class="columns">
+        <div class="column is-1 is-offset-1">
+          <button routerLink="/concert/new" class="button is-black yellow-letters" >Crear nuevo</button>
+        </div>
+    </div>
+
     <section *ngFor="let concert of concertsList" class="hero is-bold jumbotron">
       <div class="hero-body">
         <div class="container">
@@ -37,4 +44,6 @@
     <br />
     <br />
   </section>
+
+  
 </div>

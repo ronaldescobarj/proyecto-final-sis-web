@@ -7,6 +7,7 @@
         <h1 class="title" style="color: #fce200">
           TIENDA
         </h1>
+        <button class="button is-warning font" (click)="add()">Agregar producto</button>
       </div>
     </div>
   </section>
@@ -15,36 +16,42 @@
 
     
       <div class="columns is-gapless is-multiline">
-        <div class="column is-half">
+        <div *ngFor="let item of merchList" class="column is-half">
 
           <div class="box">
             <article class="media">
               <div class="media-left">
                 <figure class="image is-128x128">
-                  <img src="https://pbs.twimg.com/profile_images/905183271046193153/q_P1KBUJ_400x400.jpg" alt="Image">
+                  <img src="{{item.imageUrl}}" alt="Image">
                 </figure>
               </div>
               <div class="media-content font">
                 <div class="content">
                   <p class="is-size-5">
-                    <strong class="is-size-3">POLERA</strong>
+                    <strong class="is-size-3 is-uppercase">{{item.name}}</strong>
                     <br>
-                    50$
+                    {{item.price}}$
                   </p>
                 </div>
                 <nav class="level is-mobile">
                   <div class="level-left">
-                    <button (click)="login()" class="button is-dark font-yellow">
-                      <span class="icon">
-                        <i class="fas fa-dollar-sign"></i>
-                      </span>
-                      <span>COMPRAR</span>
-                    </button>
-                    <button (click)="login()" class="button is-dark font-yellow">
+                    <button (click)="viewDetails(item._id)" class="button is-dark font-yellow">
                       <span class="icon">
                         <i class="fas fa-info-circle"></i>
                       </span>
                       <span>VER DETALLES</span>
+                    </button>
+                    <button (click)="edit(item._id)" class="button is-dark font-yellow">
+                      <span class="icon">
+                        <i class="fas fa-dollar-sign"></i>
+                      </span>
+                      <span>EDITAR</span>
+                    </button>
+                    <button (click)="delete(item._id)" class="button is-dark font-yellow">
+                      <span class="icon">
+                        <i class="fas fa-dollar-sign"></i>
+                      </span>
+                      <span>ELIMINAR</span>
                     </button>
                   </div>
                 </nav>

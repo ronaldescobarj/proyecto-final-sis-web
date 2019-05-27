@@ -26,6 +26,7 @@ import { AddMerchComponent } from './add-merch/add-merch.component';
 import { EditMerchComponent } from './edit-merch/edit-merch.component';
 import { UpdateConcertComponent } from './update-concert/update-concert.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { ViewMerchComponent } from './view-merch/view-merch.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     AddMerchComponent,
     EditMerchComponent,
     UpdateConcertComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    ViewMerchComponent
   ],
   imports: [
     BrowserModule,

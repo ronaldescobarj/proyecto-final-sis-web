@@ -22,7 +22,7 @@
         <div class="field-body font">
           <div class="field">
             <div class="control">
-              <input class="input" type="text" placeholder="Nombre producto">
+              <input [(ngModel)]="merch.name" class="input" type="text" placeholder="Nombre producto">
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="field-body font">
           <div class="field">
             <div class="control">
-              <input class="input" type="number" placeholder="Precio">
+              <input [(ngModel)]="merch.price" class="input" type="number" placeholder="Precio">
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="field-body font">
           <div class="field">
             <div class="control">
-              <input class="input" type="number" placeholder="Unidades disponibles">
+              <input [(ngModel)]="merch.availableUnits" class="input" type="number" placeholder="Unidades disponibles">
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
         <div class="field-body font">
           <div class="field">
             <div class="control">
-              <input class="input" type="text" placeholder="URL imagen">
+              <input [(ngModel)]="merch.imageUrl" class="input" type="text" placeholder="URL imagen">
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <textarea class="textarea" placeholder="Descripcion del item"></textarea>
+              <textarea [(ngModel)]="merch.description" class="textarea" placeholder="Descripcion del item"></textarea>
             </div>
           </div>
         </div>
@@ -90,14 +90,14 @@
 
       <div class="field is-grouped is-grouped-centered font">
         <p class="control">
-          <a class="button is-warning">
-            AGREGAR
-          </a>
+          <button (click)="saveChanges()" class="button is-warning">
+            GUARDAR CAMBIOS
+          </button>
         </p>
         <p class="control">
-          <a class="button is-warning is-inverted">
+          <button (click)="cancel()" class="button is-warning is-inverted">
             CANCELAR
-          </a>
+          </button>
         </p>
       </div>
 

@@ -14,28 +14,28 @@
             <div class="field">
               <label class="label font">Correo electrónico</label>
               <div class="control has-icons-left has-icons-right">
-                <input [ngClass]="{'input': true, 'is-danger': isInvalid()}" type="email" placeholder="Correo electrónico">
+                <input [(ngModel)]="email" [ngClass]="{'input': true, 'is-danger': emailInvalid}" type="email" placeholder="Correo electrónico">
                 <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                 </span>
-                <span *ngIf="isInvalid()" class="icon is-small is-right">
+                <span *ngIf="emailInvalid" class="icon is-small is-right">
                   <i class="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
-              <p *ngIf="isInvalid()" class="help is-danger">This email is invalid</p>
+              <p *ngIf="emailInvalid" class="help is-danger">Email incorrecto</p>
             </div>
             <div class="field">
               <label class="label font">Contraseña</label>
               <div class="control has-icons-left has-icons-right">
-                <input [ngClass]="{'input': true, 'is-danger': isInvalid()}" type="password" placeholder="Contraseña">
+                <input [(ngModel)]="password" [ngClass]="{'input': true, 'is-danger': passwordInvalid}" type="password" placeholder="Contraseña">
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
-                <span *ngIf="isInvalid()" class="icon is-small is-right">
+                <span *ngIf="passwordInvalid" class="icon is-small is-right">
                   <i class="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
-              <p *ngIf="isInvalid()" class="help is-danger">This email is invalid</p>
+              <p *ngIf="passwordInvalid" class="help is-danger">Contraseña incorrecta</p>
             </div>
             <div class="control">
               <button (click)="login()" class="button is-dark is-fullwidth font">

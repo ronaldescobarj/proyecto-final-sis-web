@@ -13,7 +13,7 @@ export class CreateUserComponent implements OnInit {
   userData = {
     name: null,
     identityCard: null,
-    eMail: null,
+    email: null,
     password: null,
     homeAddress: null,
   }
