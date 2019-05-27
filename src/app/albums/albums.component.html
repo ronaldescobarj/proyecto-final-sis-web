@@ -1,0 +1,25 @@
+
+<div class="album-collection">
+
+  <br><br><br><br>
+
+  <div class="container">
+    
+    <div class="container is-fluid">
+      <div class="columns is-multiline">
+        
+        <div class="column is-one-third-desktop" *ngFor="let album of artistAlbums">
+          <div *ngIf="album.album_type == 'album'" (click)="goToAlbumView(album.id,album.images[0].url)"  class="card zoom">
+            <div class="card-image">
+              <figure class="image is-3by3">
+                <img [src]="album.images[0].url" width="350" height="350">
+              </figure>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+  </div>
+
+</div>

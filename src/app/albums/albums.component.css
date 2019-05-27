@@ -1,0 +1,21 @@
+
+.imagen{
+    padding: 5px;
+}
+
+.album-collection{
+    background-color: black;
+}
+
+.zoom {
+    transition: transform .8s;
+  }
+  
+  
+.zoom:hover {
+    -ms-transform: scale(0.5); 
+    -webkit-transform: scale(0.5);
+    transform: scale(1.1); 
+    cursor:pointer;
+}
+

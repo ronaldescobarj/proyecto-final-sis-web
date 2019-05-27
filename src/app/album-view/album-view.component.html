@@ -1,0 +1,23 @@
+<div id="body-album">
+    <br><br><br><br><br>
+    <div class="columns">
+        <div class="column is-one-third is-center is-offset-1">
+            <img [src]="albumImage" width="480" height="480">
+        </div>
+        <div class="column is-half">
+            <div class="container is-fluid animated fadeIn">
+                <ul>
+                    <li *ngFor="let song of albumSongs">
+                        <div class="columns">
+                            <div class="column is-offset-0">
+                                <iframe style="border-radius: 20px;" [src]=" song.uri | domseguro " width="662"
+                                    height="80" frameborder="0" allowtransparency="true"
+                                    allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
