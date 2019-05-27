@@ -9,9 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ConcertsListComponent implements OnInit {
 
-  concertsList = {
-
-  }
+  concertsList: any = []
 
   constructor(private httpService: HttpService, private router: Router) { }
 

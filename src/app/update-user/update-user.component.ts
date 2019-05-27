@@ -1,33 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from "@angular/common";
+import { HttpSentEvent } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 import { HttpService } from '../http.service';
 
 @Component({
-  selector: 'app-view-user',
-  templateUrl: './view-user.component.html',
-  styleUrls: ['./view-user.component.css']
+  selector: 'app-update-user',
+  templateUrl: './update-user.component.html',
+  styleUrls: ['./update-user.component.css']
 })
-export class ViewUserComponent implements OnInit {
+export class UpdateUserComponent implements OnInit {
 
   userData = {
     name: null,
-    identityCard: null, 
+    identityCard: null,
     eMail: null,
     password: null,
     homeAddress: null,
     profilePicture: null
   }
   userId: any;
-  constructor(private _location: Location, private router: Router, private httpService: HttpService, private route: ActivatedRoute)  { }
-  
+  constructor(private _location: Location, private httpService:HttpService, private route:ActivatedRoute) { }
+
   goBackLastPage() {
     this._location.back();
   }
-  deleteUser() {
-    this.httpService.delete("user", this.userId).subscribe((response) => {
-      console.log(response);
-    })
+  updateUser() {
+    console.log(this.userData);
   }
   ngOnInit() {
     this.userId = this.route.snapshot.paramMap.get("id");
@@ -38,3 +37,4 @@ export class ViewUserComponent implements OnInit {
     })
   }
 }
+

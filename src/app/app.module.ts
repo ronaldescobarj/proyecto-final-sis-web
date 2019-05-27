@@ -23,6 +23,8 @@ import { FormsModule } from '@angular/forms';
 import { MerchListComponent } from './merch-list/merch-list.component';
 import { AddMerchComponent } from './add-merch/add-merch.component';
 import { EditMerchComponent } from './edit-merch/edit-merch.component';
+import { UpdateConcertComponent } from './update-concert/update-concert.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { EditMerchComponent } from './edit-merch/edit-merch.component';
     UsersListComponent,
     MerchListComponent,
     AddMerchComponent,
-    EditMerchComponent
+    EditMerchComponent,
+    UpdateConcertComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
