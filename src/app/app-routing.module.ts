@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'album-view/:albumId/:albumImage',component: AlbumViewComponent},
-  { path: 'albums',component: AlbumsComponent}
+  { path: 'albums',component: AlbumsComponent},
   { path: 'new/concert', component:  CreateConcertComponent},
   { path: 'concerts', component:  ConcertsListComponent},
   { path: 'concert', component:  ViewConcertComponent},
