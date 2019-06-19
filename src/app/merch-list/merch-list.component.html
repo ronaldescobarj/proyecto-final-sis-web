@@ -1,9 +1,8 @@
-<br>
-<br>
 <div class="fondo">
+  <br />
   <section class="hero is-dark font">
     <div class="hero-body">
-      <div class="container">
+      <div class="container has-text-centered ">
         <h1 class="title" style="color: #fce200">
           TIENDA
         </h1>
@@ -11,56 +10,63 @@
       </div>
     </div>
   </section>
-    <br>
-    <div class="container">
 
-    
-      <div class="columns is-gapless is-multiline">
-        <div *ngFor="let item of merchList" class="column is-half">
+  <div class="container">
+    <br />
+    <div class="columns is-multiline is-mobile">
+      <div *ngFor="let item of merchList" class="column is-full box">
 
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-128x128">
-                  <img src="{{item.imageUrl}}" alt="Image">
-                </figure>
-              </div>
-              <div class="media-content font">
-                <div class="content">
-                  <p class="is-size-5">
-                    <strong class="is-size-3 is-uppercase">{{item.name}}</strong>
-                    <br>
-                    {{item.price}}$
-                  </p>
-                </div>
-                <nav class="level is-mobile">
-                  <div class="level-left">
-                    <button (click)="viewDetails(item._id)" class="button is-dark font-yellow">
-                      <span class="icon">
-                        <i class="fas fa-info-circle"></i>
-                      </span>
-                      <span>VER DETALLES</span>
-                    </button>
-                    <button (click)="edit(item._id)" class="button is-dark font-yellow">
-                      <span class="icon">
-                        <i class="fas fa-dollar-sign"></i>
-                      </span>
-                      <span>EDITAR</span>
-                    </button>
-                    <button (click)="delete(item._id)" class="button is-dark font-yellow">
-                      <span class="icon">
-                        <i class="fas fa-dollar-sign"></i>
-                      </span>
-                      <span>ELIMINAR</span>
-                    </button>
-                  </div>
-                </nav>
-              </div>
-            </article>
+        <article class="media">
+          <figure class="media-left image is-128x128">
+            <img src="{{item.imageUrl}}">
+          </figure>
+
+          <div class="media-content font">
+            <p class="is-size-6-mobile is-size-3-desktop">
+              <strong>{{item.name}}</strong>
+            </p>
+            <p class="is-size-7-mobile is-size-4-desktop">
+              <br />
+              {{item.price}}$
+            </p>
           </div>
-        </div>
+
+          <figure class="media-right">
+            <div class="list">
+              <div class="list-item">
+                <button (click)="viewDetails(item._id)" class="button is-dark font-yellow">
+                  <span class="icon">
+                    <i class="fas fa-info-circle"></i>
+                  </span>
+                  <p class="is-size-7-mobile is-size-5-desktop">Ver Detalles</p>
+                </button>
+              </div>
+
+              <div class="list-item">
+                <button (click)="edit(item._id)" class="button is-dark font-yellow">
+                  <span class="icon">
+                    <i class="fas fa-dollar-sign"></i>
+                  </span>
+                  <p class="is-size-7-mobile is-size-5-desktop">Editar</p>
+                </button>
+              </div>
+
+              <div class="list-item">
+                <button (click)="delete(item._id)" class="button is-dark font-yellow">
+                  <span class="icon">
+                    <i class="fas fa-dollar-sign"></i>
+                  </span>
+                  <p class="is-size-7-mobile is-size-5-desktop">Eliminar</p>
+                </button>
+              </div>
+            </div>
+          </figure>
+
+        </article>
+
       </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
 
+  </div>
+
+</div>

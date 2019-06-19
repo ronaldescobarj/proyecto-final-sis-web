@@ -15,7 +15,7 @@ export class AddMerchComponent implements OnInit {
     availableUnits: null,
     imageUrl: null,
     description: null
-  }
+  };
 
   constructor(private httpService: HttpService, private router: Router) { }
 
@@ -25,7 +25,7 @@ export class AddMerchComponent implements OnInit {
   addMerch() {
     this.httpService.post('merchandise', this.merch).subscribe(response => {
       this.goBack();
-    })
+    });
   }
 
   goBack() {
