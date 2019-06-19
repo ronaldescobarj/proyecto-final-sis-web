@@ -1,30 +1,26 @@
 .new-album {
-    /* background: white url('../../assets/images/trench-cover.jpg')center / cover; */
     background: black url('../../assets/images/fondo-amarillo-rectangular.jpg');
-    /* background-size: 100%; */
     max-width:100%;
     height:auto;
 }
 
 .album-cover {
-    background: black url('../../assets/images/trench-cover-mq.jpg');
-    
-
+    padding: 10px;
+    max-width:100%;
+    height:auto;
 }
 
 .store-cover {
-    background: black url('../../assets/images/merch-mq.jpg');
-    /* background-size: 100%; */
     max-width:100%;
     height:auto;
+    padding: 10px;
 
 }
 
 .concerts-cover {
-    background: black url('../../assets/images/concierto.jpg');
-    /* background-size: 100%; */
     max-width:100%;
     height:auto;
+    padding: 10px;
 }
 
 .font {
