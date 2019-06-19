@@ -14,7 +14,7 @@ export class SpotyService {
   getQuery(query:string){
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
-      'Authorization' : 'Bearer BQBIVwVD5xmHIp96Ap53p22JJXrI_5LbDB2EfI4Mo0Lz8I0Dsn0wxkE3DB7gfyp6_X-K2R7LISqRHKTU8sI'
+      'Authorization' : 'Bearer BQCDHRJ7fBbuGOAx_jK9wYyPEtOuM3di3A8b6Gn5XfgGTGQVzBK2RJBO3uuUtIBKnejW6TeqrsjJiTMq4qI'
     });
     return this.http.get(url,{headers})
   }
