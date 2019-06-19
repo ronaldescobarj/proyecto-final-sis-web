@@ -36,4 +36,8 @@ export class EditMerchComponent implements OnInit {
   goBack() {
     this.router.navigateByUrl('/merch');
   }
+
+  cancel() {
+    this.goBack();
+  }
 }
