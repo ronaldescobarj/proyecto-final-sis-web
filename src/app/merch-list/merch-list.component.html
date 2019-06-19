@@ -1,5 +1,6 @@
 <div class="fondo">
   <br />
+
   <section class="hero is-dark font">
     <div class="hero-body">
       <div class="container has-text-centered ">
@@ -10,63 +11,62 @@
       </div>
     </div>
   </section>
+  <section class="hero is-large is-black">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-multiline is-mobile">
+            <div *ngFor="let item of merchList" class="column is-full box">
 
-  <div class="container">
-    <br />
-    <div class="columns is-multiline is-mobile">
-      <div *ngFor="let item of merchList" class="column is-full box">
+              <article class="media">
+                <figure class="media-left image is-128x128">
+                  <img src="{{item.imageUrl}}">
+                </figure>
 
-        <article class="media">
-          <figure class="media-left image is-128x128">
-            <img src="{{item.imageUrl}}">
-          </figure>
+                <div class="media-content font">
+                  <p class="is-size-6-mobile is-size-3-desktop">
+                    <strong>{{item.name}}</strong>
+                  </p>
+                  <p class="is-size-7-mobile is-size-4-desktop">
+                    <br />
+                    {{item.price}}$
+                  </p>
+                </div>
 
-          <div class="media-content font">
-            <p class="is-size-6-mobile is-size-3-desktop">
-              <strong>{{item.name}}</strong>
-            </p>
-            <p class="is-size-7-mobile is-size-4-desktop">
-              <br />
-              {{item.price}}$
-            </p>
-          </div>
+                <figure class="media-right">
+                  <div class="list">
+                    <div class="list-item">
+                      <button (click)="viewDetails(item._id)" class="button is-dark font-yellow">
+                        <span class="icon">
+                          <i class="fas fa-info-circle"></i>
+                        </span>
+                        <p class="is-size-7-mobile is-size-5-desktop">Ver Detalles</p>
+                      </button>
+                    </div>
 
-          <figure class="media-right">
-            <div class="list">
-              <div class="list-item">
-                <button (click)="viewDetails(item._id)" class="button is-dark font-yellow">
-                  <span class="icon">
-                    <i class="fas fa-info-circle"></i>
-                  </span>
-                  <p class="is-size-7-mobile is-size-5-desktop">Ver Detalles</p>
-                </button>
-              </div>
+                    <div class="list-item">
+                      <button (click)="edit(item._id)" class="button is-dark font-yellow">
+                        <span class="icon">
+                          <i class="fas fa-dollar-sign"></i>
+                        </span>
+                        <p class="is-size-7-mobile is-size-5-desktop">Editar</p>
+                      </button>
+                    </div>
 
-              <div class="list-item">
-                <button (click)="edit(item._id)" class="button is-dark font-yellow">
-                  <span class="icon">
-                    <i class="fas fa-dollar-sign"></i>
-                  </span>
-                  <p class="is-size-7-mobile is-size-5-desktop">Editar</p>
-                </button>
-              </div>
-
-              <div class="list-item">
-                <button (click)="delete(item._id)" class="button is-dark font-yellow">
-                  <span class="icon">
-                    <i class="fas fa-dollar-sign"></i>
-                  </span>
-                  <p class="is-size-7-mobile is-size-5-desktop">Eliminar</p>
-                </button>
-              </div>
+                    <div class="list-item">
+                      <button (click)="delete(item._id)" class="button is-dark font-yellow">
+                        <span class="icon">
+                          <i class="fas fa-dollar-sign"></i>
+                        </span>
+                        <p class="is-size-7-mobile is-size-5-desktop">Eliminar</p>
+                      </button>
+                    </div>
+                  </div>
+                </figure>
+              </article>
             </div>
-          </figure>
-
-        </article>
-
+          </div>
       </div>
     </div>
-
-  </div>
+    </section>
 
 </div>

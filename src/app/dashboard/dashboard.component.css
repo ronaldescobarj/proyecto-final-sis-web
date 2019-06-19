@@ -5,7 +5,7 @@
 }
 
 .album-cover {
-    padding: 10px;
+    /* padding: 10px; */
     max-width:100%;
     height:auto;
 }
@@ -13,14 +13,13 @@
 .store-cover {
     max-width:100%;
     height:auto;
-    padding: 10px;
-
+    /* padding: 10px; */
 }
 
 .concerts-cover {
     max-width:100%;
     height:auto;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .font {

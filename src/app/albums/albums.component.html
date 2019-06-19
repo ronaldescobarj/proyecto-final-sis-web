@@ -6,7 +6,6 @@
     
     <div class="container is-fluid">
       <div class="columns is-multiline">
-        
         <div class="column is-one-third-desktop" *ngFor="let album of artistAlbums">
           <div *ngIf="album.album_type == 'album'" (click)="goToAlbumView(album.id,album.images[0].url)"  class="card zoom animated fadeIn">
             <div class="card-image">
