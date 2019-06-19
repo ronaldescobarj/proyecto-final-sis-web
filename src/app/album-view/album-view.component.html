@@ -1,31 +1,27 @@
-
 <section id="body-album" class="hero is-fullheight">
-        <br><br><br><br><br>
-        <div class="columns">
-            <div class="column is-one-third is-center is-offset-1 ">
-                <img  [src]="albumImage" width="480" height="480">
-            </div>
-    
-            <div class="column is-half">
-                <div class="container is-fluid animated fadeIn">
-                    <div *ngIf="loading" class="row is-center animated fadeIn">
-                        <div class="col">
-                            <i class="fas fa-sync-alt fa-5x fa-spin"></i>
-                        </div>
+    <br><br><br><br><br>
+    <div class="columns is-desktop">
+        <div class="column is-4 is-center is-offset-1 ">
+            <img [src]="albumImage" width=100% height=100%>
+        </div>
+
+        <div class="column is-half">
+            <div class="container is-fluid animated fadeIn">
+                <div *ngIf="loading" class="row is-center animated fadeIn">
+                    <div class="col">
+                        <i class="fas fa-sync-alt fa-5x fa-spin"></i>
                     </div>
-                    <ul *ngIf="!loading">
-                        <li *ngFor="let song of albumSongs">
-                            <div class="columns">
-                                <div class="column is-offset-0">
-                                    <iframe style="border-radius: 20px;" [src]=" song.uri | domseguro " width="662"
-                                        height="80" frameborder="0" allowtransparency="true"
-                                        allow="encrypted-media"></iframe>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
+                <ul *ngIf="!loading">
+                    <li *ngFor="let song of albumSongs">
+                        <div class="column is-offset-0 ">
+                            <iframe style="border-radius: 20px;" [src]=" song.uri | domseguro " height="85px" width=100%
+                                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <br><br>
+    </div>
+    <br><br>
 </section>
