@@ -1,51 +1,50 @@
 <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      
-      <a class="navbar-item">
-        <img routerLink="dashboard"
-          src="https://d2cstorage-a.akamaihd.net/atl/option3/MKhsaxsd31RL2r6Pm/SihRQqwHfB7Xih4fKDoK.svg" width="112"
-          height="28">
+  <div class="navbar-brand">
+
+    <a class="navbar-item">
+      <img routerLink="dashboard"
+        src="https://d2cstorage-a.akamaihd.net/atl/option3/MKhsaxsd31RL2r6Pm/SihRQqwHfB7Xih4fKDoK.svg" width="112"
+        height="28">
+    </a>
+
+    <a class="navbar-burger burger" style="color: #fce200;" data-target="navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbar" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/albums" style=" font-family: fantasy; color: #fce200">
+        ALBUMES
       </a>
-  
-      <a class="navbar-burger burger"  data-target="navbar">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+
+      <a class="navbar-item" routerLink="/merch" style=" font-family: fantasy; color: #fce200">
+        TIENDA
       </a>
-  
+
+      <a class="navbar-item" routerLink="/concerts" style="font-family: fantasy; color: #fce200">
+        CONCIERTOS
+      </a>
     </div>
-  
-    <div id="navbar" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" routerLink="/albums" style=" font-family: fantasy; color: #fce200">
-          ALBUMES
-        </a>
-  
-        <a class="navbar-item" routerLink="/merch" style=" font-family: fantasy; color: #fce200">
-          TIENDA
-        </a>
-  
-        <a class="navbar-item" routerLink="/concerts" style="font-family: fantasy; color: #fce200">
-          CONCIERTOS
-        </a>
-      </div>
-  
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a (click)="register()" *ngIf="!isLoggedIn()" id="sign-up-but" class="button is-light">
-              REGISTRARSE
-            </a>
-  
-            <a *ngIf="!isLoggedIn()" routerLink="/login" id="log-in-but" class="button is-light">
-              INICIAR SESION
-            </a>
-  
-            <a (click)="logout()" *ngIf="isLoggedIn()" id="log-out-but" class="button is-light">
-              CERRAR SESION
-            </a>
-          </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a (click)="register()" *ngIf="!isLoggedIn()" id="sign-up-but" class="button is-light">
+            REGISTRARSE
+          </a>
+
+          <a *ngIf="!isLoggedIn()" routerLink="/login" id="log-in-but" class="button is-light">
+            INICIAR SESION
+          </a>
+
+          <a (click)="logout()" *ngIf="isLoggedIn()" id="log-out-but" class="button is-light">
+            CERRAR SESION
+          </a>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
