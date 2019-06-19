@@ -28,6 +28,13 @@ import { UpdateConcertComponent } from './update-concert/update-concert.componen
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { ViewMerchComponent } from './view-merch/view-merch.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from '../environments/environment';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +63,9 @@ import { ViewMerchComponent } from './view-merch/view-merch.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthUserGuard,
