@@ -1,24 +1,21 @@
-<br>
-<br>
 <div class="fondo">
+  <br />
   <section class="hero is-dark yellow-background font">
     <div class="hero-body">
-      <div class="container">
+      <div class="container has-text-centered">
         <h1 class="title" style="color: black">
           AGREGAR PRODUCTO
         </h1>
       </div>
     </div>
   </section>
-  <br>
+
   <div class="columns is-mobile">
     <div class="column is-three-fifths is-offset-one-fifth">
-      <div class="field is-horizontal">
-        <div class="field-label is-normal font">
-          <label class="label">
-            <span class="tag is-warning is-radiusless is-medium">Nombre producto</span>
-          </label>
-        </div>
+      <div class="field">
+        <label class="label">
+          <span class="tag is-warning is-radiusless is-medium">Nombre producto</span>
+        </label>
         <div class="field-body font">
           <div class="field">
             <div class="control">
@@ -28,12 +25,10 @@
         </div>
       </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal font">
-          <label class="label">
-            <span class="tag is-warning is-radiusless is-medium">Precio</span>
-          </label>
-        </div>
+      <div class="field">
+        <label class="label">
+          <span class="tag is-warning is-radiusless is-medium">Precio</span>
+        </label>
         <div class="field-body font">
           <div class="field">
             <div class="control">
@@ -43,12 +38,10 @@
         </div>
       </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal font">
-          <label class="label">
-            <span class="tag is-warning is-radiusless is-medium">Unidades disponibles</span>
-          </label>
-        </div>
+      <div class="field">
+        <label class="label">
+          <span class="tag is-warning is-radiusless is-medium">Unidades disponibles</span>
+        </label>
         <div class="field-body font">
           <div class="field">
             <div class="control">
@@ -58,12 +51,10 @@
         </div>
       </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal font">
-          <label class="label">
-            <span class="tag is-warning is-radiusless is-medium">URL imagen</span>
-          </label>
-        </div>
+      <div class="field">
+        <label class="label">
+          <span class="tag is-warning is-radiusless is-medium">URL imagen</span>
+        </label>
         <div class="field-body font">
           <div class="field">
             <div class="control">
@@ -73,12 +64,10 @@
         </div>
       </div>
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal font">
-          <label class="label">
-            <span class="tag is-warning is-radiusless is-medium">Descripcion</span>
-          </label>
-        </div>
+      <div class="field">
+        <label class="label">
+          <span class="tag is-warning is-radiusless is-medium">Descripcion</span>
+        </label>
         <div class="field-body">
           <div class="field">
             <div class="control">
@@ -89,19 +78,18 @@
       </div>
 
       <div class="field is-grouped is-grouped-centered font">
-        <p class="control">
+        <div class="control">
           <button (click)="addMerch()" class="button is-warning">
             AGREGAR
           </button>
-        </p>
-        <p class="control">
-          <a (click)="goBack()" class="button is-warning is-inverted">
+        </div>
+        <div class="control">
+          <button (click)="goBack()" class="button is-warning is-inverted">
             CANCELAR
-          </a>
-        </p>
+          </button>
+        </div>
       </div>
 
     </div>
   </div>
-  <br><br><br><br><br><br><br><br>
 </div>

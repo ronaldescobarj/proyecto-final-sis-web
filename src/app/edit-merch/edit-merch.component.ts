@@ -16,24 +16,24 @@ export class EditMerchComponent implements OnInit {
     availableUnits: null,
     imageUrl: null,
     description: null
-  }
+  };
 
   constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.merchId = this.route.snapshot.paramMap.get("id");
-    this.httpService.get("merchandise/" + this.merchId).subscribe(response => {
+    this.merchId = this.route.snapshot.paramMap.get('id');
+    this.httpService.get('merchandise/' + this.merchId).subscribe(response => {
       this.merch = response;
-    })
+    });
   }
 
   saveChanges() {
-    this.httpService.put("merchandise", this.merch).subscribe(response => {
+    this.httpService.put('merchandise', this.merch).subscribe(response => {
       this.goBack();
-    })
+    });
   }
 
   goBack() {
-    this.router.navigateByUrl("/merch");
+    this.router.navigateByUrl('/merch');
   }
 }

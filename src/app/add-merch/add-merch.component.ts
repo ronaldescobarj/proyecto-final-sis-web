@@ -23,13 +23,12 @@ export class AddMerchComponent implements OnInit {
   }
 
   addMerch() {
-    console.log(this.merch);
-    this.httpService.post("merchandise", this.merch).subscribe(response => {
+    this.httpService.post('merchandise', this.merch).subscribe(response => {
       this.goBack();
     })
   }
 
   goBack() {
-    this.router.navigateByUrl("/merch");
+    this.router.navigateByUrl('/merch');
   }
 }
