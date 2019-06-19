@@ -33,7 +33,7 @@ export class LoginService {
     return this.httpService.post("user/login", credentials).subscribe(response => {
       let valid = callback(response);
       if (valid)
-        this.success(credentials);
+        this.success(response);
     })
   }
 
